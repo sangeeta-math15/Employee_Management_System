@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "ba9d3d5d-ef74-4bfb-ba66-134f53efc606",
+		"name": "Employee_Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19281423"
+	},
+	"item": [
+		{
+			"name": "register Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"putti\",\n    \"email\":\"sageeta@gmail.com\",\n    \"password\":\"geta@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"sageetamath\",\n    \"password\":\"geta@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refresh_token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyOTI4MTA4MiwiaWF0IjoxNzI5MTk0NjgyLCJqdGkiOiIwZTNkMTNmZmI3OWE0Zjc4OWQ1ZDQ0YmExOGRiM2ExNyIsInVzZXJfaWQiOjR9.dJWifm2SUvaJm8Obdp4WMytEhn7ynHd1_u0LXKoAN_M\"   \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/logout/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_emp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMwNzEyNDQzLCJpYXQiOjE3MzA3MTIxNDMsImp0aSI6IjM4YWFiNTAxZjllMTRkYWZiYjA2NzEzZTY2YWM5MzliIiwidXNlcl9pZCI6Mn0.9NijiMEjQE2vgd-iELG13lrrLsKdyTJJrq_MrktP7ZQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"kipi\",\n    \"email\": \"kipi1@example.com\",\n    \"department\": \"Engineering\",\n    \"role\": \"Developer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employees/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMwNzEyMTU2LCJpYXQiOjE3MzA3MTE4NTYsImp0aSI6IjU0NjM0NmFlYjQxNjRjMzM4ODYwZDcxN2I4Y2NhNzFkIiwidXNlcl9pZCI6Mn0.QP0fz52ngJorxxTqMlA-ab1CsXrd6bM4MbzCBr8er7k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"omkarmathhhh\",\n    \"email\": \"omkarmath@example.com\",\n    \"department\": \"Engineering\",\n    \"role\": \"Developer\",\n    \"date_joined\": \"2024-11-04\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employees/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_emp",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMwNzA4OTUwLCJpYXQiOjE3MzA3MDg2NTAsImp0aSI6IjAzYjhjODVlMzAyOTQxNzZhZDc4MmJlMTc5MjY2YzJmIiwidXNlcl9pZCI6Mn0.JmN9qiqdGH3U7rVpjk_jmTxTFNWtYKTM1MvNagmqYOs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"omkarmath\",\n    \"email\": \"omkarmath@example.com\",\n    \"department\": \"Engineering\",\n    \"role\": \"Developer\",\n    \"date_joined\": \"2024-11-04\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employees/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list_emp",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMwNzA5MDA2LCJpYXQiOjE3MzA3MDg3MDYsImp0aSI6Ijk4YTRiOWNhMTVmYTRjOWQ5ZTcwZWEyNzUwMDcwOTEzIiwidXNlcl9pZCI6Mn0.RDLoDqPvBucxcvjYkFydU3XhY12cf7pwm4RTJz4VJ5k",
+						"type": "text"
+					},
+					{
+						"key": "search",
+						"value": "Engineering",
+						"type": "text"
+					},
+					{
+						"key": "page",
+						"value": "2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employees/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retrive_single_emp",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMwNzA4NDg5LCJpYXQiOjE3MzA3MDgxODksImp0aSI6IjM0MmFhYmIxYjFkZDQyNzJiZjYzNjFmMDNhOWNiZGExIiwidXNlcl9pZCI6Mn0.LvDk6-aaiE2Qtr96M9icj8mC-WS0VH_D4kA77MK73fU",
+						"type": "text"
+					},
+					{
+						"key": "search",
+						"value": "Engineering",
+						"type": "text"
+					},
+					{
+						"key": "page",
+						"value": "2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employees/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						"3",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
